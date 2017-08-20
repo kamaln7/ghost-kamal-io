@@ -31,20 +31,20 @@
         {{!-- Links to Previous/Next posts --}}
 	<aside class="flex items-center cf w-80-ns mw9 mt3 center tc sans-serif" role="navigation">
 	    <div class="w-33">
-		{{#prev_post}}
-			<a class="fl dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>←Previous</a>
-		{{else}}
-			<a class="fl dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">←Previous</a>
-		{{/prev_post}}
-	    </div>
-	    <div class="w-33">
-	    </div>
-	    <div class="w-33">
 		{{#next_post}}
-			<a class="fr dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>Next→</a>
+			<a class="fl dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>←Newer</a>
 		{{else}}
-			<a class="fr dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">Next→</a>
+			<a class="fl dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">←Newer</a>
 		{{/next_post}}
+	    </div>
+	    <div class="w-33">
+	    </div>
+	    <div class="w-33">
+		{{#prev_post}}
+			<a class="fr dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>Older→</a>
+		{{else}}
+			<a class="fr dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">Older→</a>
+		{{/prev_post}}
 	    </div>
 	</aside>
 
