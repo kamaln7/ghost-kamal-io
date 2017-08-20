@@ -1,0 +1,11 @@
+<nav class="flex items-center cf w-80-ns mw6 mt6 center tc sans-serif" role="navigation">
+    <div class="w-33">
+        <a class="fl dib ph3 pv2 no-underline {{#if prev}}hover-black link gray{{/if}} ba f6 {{#unless prev}}disabled black-20 cursor-default{{/unless}}" {{#if prev}}href="{{page_url prev}}"{{/if}}>←Newer</a>
+    </div>
+    <div class="w-33">
+        <span class="ttu gray tracked f6 f5-ns">Page {{page}} of {{pages}}</span>
+    </div>
+    <div class="w-33">
+        <a class="fr dib ph3 pv2 no-underline {{#if next}}hover-black link gray{{/if}} ba f6 {{#unless next}}disabled black-20 cursor-default{{/unless}}" {{#if next}}href="{{page_url next}}"{{/if}}>Older→</a>
+    </div>
+</nav>

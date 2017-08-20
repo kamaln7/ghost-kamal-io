@@ -1,0 +1,54 @@
+{{!< default}}
+
+{{!-- The comment above "< default" means - insert everything in this file into
+    the {{{body}}} of the default.hbs template, containing the blog header/footer. --}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<header>
+    <nav class="mb4 tl">
+        {{#if @blog.navigation}}
+            <a class="ttu no-underline link gray hover-black sans-serif ph3 pv1" href="{{@blog.url}}">←Home</a>
+        {{/if}}
+    </nav>
+</header>
+
+<main class="" role="main">
+    <article class="{{post_class}}">
+
+        <header class="pb5">
+            <h1 class="kamal-io-heading f2 f1-ns tc ttu tracked mb0 mb3-ns">{{title}}</h1>
+            <section class="tc mt2">
+                <time class="i ttu sans-serif gray f6 f5-ns" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+        </header>
+
+        <section class="kamal-io-lh-copy f3-ns f4 tj center mw8 pb4 sans-serif">
+            {{content}}
+        </section>
+
+        {{!-- Links to Previous/Next posts --}}
+	<aside class="flex items-center cf w-80-ns mw9 mt3 center tc sans-serif" role="navigation">
+	    <div class="w-33">
+		{{#prev_post}}
+			<a class="fl dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>←Previous</a>
+		{{else}}
+			<a class="fl dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">←Previous</a>
+		{{/prev_post}}
+	    </div>
+	    <div class="w-33">
+	    </div>
+	    <div class="w-33">
+		{{#next_post}}
+			<a class="fr dib ph3 pv2 no-underline hover-black link ba gray f6" href={{url}}>Next→</a>
+		{{else}}
+			<a class="fr dib ph3 pv2 no-underline ba black-20 f6 disabled cursor-default">Next→</a>
+		{{/next_post}}
+	    </div>
+	</aside>
+
+    </article>
+</main>
+
+{{/post}}
